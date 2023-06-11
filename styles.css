@@ -1,0 +1,341 @@
+body {
+  /* フォントの設定 */
+  font-family: Arial, sans-serif;
+  /* ページの最大幅 */
+  max-width: 600px;
+  /* 中央寄せのためのマージン設定 */
+  margin: auto;
+  /* 内側の余白 */
+  padding: 20px;
+  /* 背景色 */
+  /* background-color: #333; */
+}
+
+.light-mode {
+  background-color: #f0f0f0;
+  color: #161616;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+h1 {
+  /* タイトルの色 */
+  margin:auto;
+  color: #61ca4c;
+  /* 中央揃え */
+  text-align: center; 
+  -webkit-text-stroke: 0.5px #000;
+  
+}
+
+select,
+button {
+  /* ブロック要素として表示 */
+  display: block;
+  /* 幅を100%に設定 */
+  width: 100%;
+  /* 上側のマージン */
+  margin-top: 10px;
+  /* 内側の余白 */
+  padding: 10px;
+}
+
+textarea {
+  /* 幅を100%に設定 */
+  width: 100%;
+  /* 高さを200pxに設定 */
+  height: 200px;
+  /* 上側のマージン */
+  margin-top: 10px;
+}
+
+/* テンプレート選択用ドロップダウンリスト */
+#templateSelect {
+  /* フォントの設定 */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+
+  /* ボーダーと背景色の設定 */
+  border: none;
+  border-radius: 5px;
+  background-color: #333333;
+
+  /* パディングとマージンの設定 */
+  padding: 10px;
+  margin: 10px 0;
+
+  /* ドロップダウンのアイコンのカスタマイズ */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 32 32"><path d="M16 22L6 9h20l-10 13z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+/* テンプレート保存ボタン */
+#newTemplateButton {
+  /* フォントの設定 */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+
+  /* ボーダーと背景色の設定 */
+  border: none;
+  border-radius: 5px;
+  background-color: #333333;
+
+  /* パディングとマージンの設定 */
+  padding: 10px 20px;
+  margin: 10px 0;
+
+  /* カーソルの設定 */
+  cursor: pointer;
+
+  /* ホバー時のスタイル */
+  transition: background-color 0.3s ease;
+}
+
+#newTemplateButton:hover {
+  background-color: #666666;
+}
+
+/* 保存ボタン */
+#saveButton {
+  /* フォントの設定 */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+
+  /* ボーダーと背景色の設定 */
+  border: none;
+  border-radius: 5px;
+  background-color: #333333;
+
+  /* パディングとマージンの設定 */
+  padding: 10px 20px;
+  margin: 10px 0;
+
+  /* カーソルの設定 */
+  cursor: pointer;
+
+  /* ホバー時のスタイル */
+  transition: background-color 0.3s ease;
+}
+
+#saveButton:hover {
+  background-color: #666666;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flexbox;
+  margin-top: 10%;
+  margin-left: 25%;
+  outline: auto;
+}
+
+.popup-window {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close-button {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#noteContent {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-height: 70%; /* 追加 */
+  overflow-y: auto; /* 追加 */
+}
+
+.hidden {
+  display: none;
+}
+
+.wave-list-box ul,
+.wave-list-box li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.marquee-box {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.marquee {
+  width: 100%;
+  height: auto;
+}
+.wave-list-box {
+  float: left;
+  width: 100%;
+}
+.wave-list-box ul {
+  float: left;
+  height: 100px;
+  overflow: hidden;
+  zoom: 1;
+}
+.wave-list-box ul li {
+  height: 100%; /* 画像の高さに合わせる */
+  width: 100%;
+  float: left;
+  line-height: 30px;
+  list-style: none;
+  overflow: hidden; /* 画像がはみ出さないようにする */
+}
+.wave-box {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #333;
+}
+footer {
+  /* フォントの設定 */
+  font-family: Arial, sans-serif;
+  /* 背景色 */
+  background-color: #333;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+
+
+.toggle-switch {
+  position: absolute; /* 変更 */
+  width: 80px;
+  height: 30px;
+  margin-right:20px;
+  --light: #FFFFFF;
+  --dark: #dc5b51;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+  right: 0;
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position:absolute;
+  display: none;
+  
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked~.slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 2.8px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 6px -3px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked~.slider::before {
+  -webkit-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  transform: translateX(40px);
+  background-color: #161616;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+/* 保存ボタン */
+#achievementButton {
+  /* フォントの設定 */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+
+  /* ボーダーと背景色の設定 */
+  border: none;
+  border-radius: 5px;
+  background-color: #333333;
+
+  /* パディングとマージンの設定 */
+  padding: 10px 20px;
+  margin: 10px 0;
+
+  /* カーソルの設定 */
+  cursor: pointer;
+
+  /* ホバー時のスタイル */
+  transition: background-color 0.3s ease;
+}
+
+#saveButton:hover {
+  background-color: #666666;
+}
+achievementButton

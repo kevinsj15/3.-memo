@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive Notepad</title>
+    <!-- レスポンシブデザインのためのメタタグ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSSファイルをリンクする -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body class="light-mode">
+    <div class="toggle-switch">
+      <label class="switch-label">
+      <input
+        type="checkbox"
+        class="checkbox"
+       
+      ></input>
+      <span class="slider"></span>
+    </label>
+  </div>
+  
+    <!-- メインタイトル -->
+    <h1>Responsive Notepad</h1>
+
+    <!-- テンプレートを選択するためのドロップダウンリスト -->
+    <select id="templateSelect">
+      <option value="">-- Select Template --</option>
+    </select>
+
+    <!-- 新しいテンプレートを作成するためのボタン -->
+    <button id="newTemplateButton">New Template</button>
+
+    <!-- ノートを書くためのテキストエリア -->
+    <textarea id="noteArea"></textarea>
+
+    <!-- ノートを保存するためのボタン -->
+    <button id="saveButton">Save</button>
+
+    <!-- 保存成功時のポップアップ -->
+    <div id="savePopup" class="popup-window">
+      <div class="popup-content">
+          <span class="close-button">&times;</span>
+          <p>Successfully saved!</p>
+      </div>
+    </div>
+
+    <!-- 新たに追加 -->
+    <div id="notes">
+      <h2>Notes</h2>
+      <ul id="noteList"></ul>
+    </div>
+
+    <!-- ポップアップウィンドウ -->
+    <div id="popup" class="hidden">
+      <button id="closePopup">閉じる</button>
+      <div id="noteContent"></div>
+    </div>
+
+    <!-- できるようになったことリスト -->
+    <div id="achievements">
+      <h2>Achievements</h2>
+      <input type="text" id="achievementInput" />
+      <button id="achievementButton">Add Achievement</button>
+      <table id="achievementTable">
+        <tr>
+          <th>Date</th>
+          <th>Achievement</th>
+        </tr>
+      </table>
+    </div>
+
+    <!-- JavaScriptファイルをリンクする -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+<footer>
+  <!-- footer -->
+  <div class="wave-box">
+    <div class="marquee-box marquee-up" id="marquee-box">
+      <div class="marquee">
+        <div class="wave-list-box" id="wave-list-box1">
+          <ul>
+            <li><img alt="波" src="images/wave_02.png" /></li>
+          </ul>
+        </div>
+        <div class="wave-list-box" id="wave-list-box2">
+          <ul>
+            <li><img alt="波" src="images/wave_02.png" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="marquee-box" id="marquee-box3">
+      <div class="marquee">
+        <div class="wave-list-box" id="wave-list-box4">
+          <ul>
+            <li><img alt="波" src="./images/wave_01.png" /></li>
+          </ul>
+        </div>
+        <div class="wave-list-box" id="wave-list-box5">
+          <ul>
+            <li><img alt="波" src="./images/wave_01.png" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer end -->
+</footer>
+</html>
